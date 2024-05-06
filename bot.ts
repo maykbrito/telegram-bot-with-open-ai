@@ -42,14 +42,7 @@ const bot = new Bot(token) // <-- put your bot token between the ""
 bot.command('start', ctx => ctx.reply('Welcome! Up and running.'))
 // Handle other messages.
 bot.on('message', async ctx => {
-  // console.dir(ctx.chat, { depth: true })
-  // console.log()
-
   ctx.reply('Got another message!')
-
-  if (ctx.from.username != 'maykbrito') {
-    return
-  }
 
   const photo = ctx.message.photo
   if (!photo) return
